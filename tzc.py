@@ -6,8 +6,8 @@ import datetime
 import pathlib
 from pytz import timezone
 
-tzlong = "Asia/Seoul"
-tz = "KST"
+tzlong = "America/Los_Angeles"
+tz = "PDT"
 
 
 class termcolor:
