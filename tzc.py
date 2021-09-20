@@ -28,9 +28,9 @@ def convertTimeZone(file_name, date_format="%y%m%d %H%M%S"):
     datetime_obj = datetime.datetime.strptime(date + " " + time, "%y%m%d %H%M%S")
     datetime_obj_utc = datetime_obj.replace(tzinfo=timezone("UTC"))
     return (
-        datetime_obj_utc.astimezone(timezone(tzlong)).strftime(date_format)
+        tz
         + " "
-        + tz
+        + datetime_obj_utc.astimezone(timezone(tzlong)).strftime(date_format)
         + " "
         + " ".join(str(x) for x in rest)
     )
